@@ -8,12 +8,13 @@
 }
 
 img {
-  display: block;
+  display: none;
   width: 100%;
-  flex: 1 0 auto;
 }
-
-.slider-carrousel {
+.show-img {
+  display: block;
+}
+.slider-carousel {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,12 +22,11 @@ img {
   align-items: center;
   background-color: darkslategrey;
 }
-.carrousel-container {
+.carousel-container {
   max-width: 50vw;
   border: 5px dashed yellowgreen;
-  overflow: hidden;
 }
-.carrousel-images {
+.carousel-images {
   display: flex;
 }
 .image-circles-container {
@@ -43,6 +43,6 @@ img {
   background-color: yellowgreen;
   cursor: pointer;
 }
-.carrousel-active {
+.carousel-active {
   border: 3px solid black;
 }
