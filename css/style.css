@@ -20,14 +20,16 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: darkslategrey;
+  background-color: rgb(3, 22, 43);
 }
 .carousel-container {
-  max-width: 50vw;
-  border: 5px dashed yellowgreen;
+  max-width: 80vw;
+  height: 70vh;
+  border: 20px double greenyellow;
 }
 .carousel-images {
   display: flex;
+  height: 100%;
 }
 .image-circles-container {
   display: flex;
@@ -40,9 +42,24 @@ img {
   width: 15px;
   border-radius: 50%;
   margin: 0 10px;
-  background-color: yellowgreen;
+  background-color: greenyellow;
   cursor: pointer;
 }
 .carousel-active {
-  border: 3px solid black;
+  background-color: green;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .carousel-container {
+    max-width: 100vw;
+    height: 40vh;
+    border-right: none;
+    border-left: none;
+  }
+  .image-circle {
+    height: 13px;
+    width: 13px;
+    margin: 0 7px;
+  }
 }
