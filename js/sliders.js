@@ -1,4 +1,4 @@
-const images = document.querySelectorAll("img")
+const images = document.querySelectorAll(".slide1")
 const circleContainer = document.querySelector(".image-circles-container")
 
 images.forEach(() => {
