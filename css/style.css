@@ -24,12 +24,45 @@ img {
 }
 .carousel-container {
   max-width: 80vw;
-  height: 70vh;
+  max-height: 70vh;
   border: 20px double greenyellow;
 }
+.image-counter {
+  position: absolute;
+  padding: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: green;
+  z-index: 99;
+}
 .carousel-images {
+  position: relative;
   display: flex;
   height: 100%;
+  justify-content: space-between;
+}
+.prev-button,
+.next-button {
+  position: absolute;
+  padding: 35px 25px;
+  align-self: center;
+  font-size: 1.5em;
+  color: greenyellow;
+  cursor: pointer;
+}
+.prev-button:hover,
+.next-button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.prev-button {
+  left: 0;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+.next-button {
+  right: 0;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%;
 }
 .image-circles-container {
   display: flex;
@@ -75,5 +108,14 @@ img {
     height: 13px;
     width: 13px;
     margin: 0 7px;
+  }
+  .image-counter {
+    font-size: 1.125em;
+    padding: 5px;
+  }
+  .prev-button,
+  .next-button {
+    padding: 20px 15px;
+    font-size: 1em;
   }
 }
