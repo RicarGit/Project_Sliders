@@ -37,6 +37,14 @@ img {
   color: green;
   z-index: 99;
 }
+.image-counter2 {
+  position: absolute;
+  padding: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: green;
+  z-index: 99;
+}
 .carousel-images {
   position: relative;
   display: flex;
@@ -80,6 +88,12 @@ img {
   align-items: center;
   margin-top: 20px;
 }
+.image-circles-container4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 .image-circle {
   height: 15px;
   width: 15px;
@@ -89,6 +103,14 @@ img {
   cursor: pointer;
 }
 .image-circle2 {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: greenyellow;
+  cursor: pointer;
+}
+.image-circle4 {
   height: 15px;
   width: 15px;
   border-radius: 50%;
