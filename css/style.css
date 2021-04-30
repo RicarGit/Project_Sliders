@@ -21,6 +21,8 @@ img {
   justify-content: center;
   align-items: center;
   background-color: rgb(3, 22, 43);
+  border-bottom: 1px dotted greenyellow;
+  border-top: 1px dotted greenyellow;
 }
 .carousel-container {
   max-width: 80vw;
@@ -49,20 +51,22 @@ img {
   font-size: 1.5em;
   color: greenyellow;
   cursor: pointer;
+  user-select: none;
 }
 .prev-button:hover,
 .next-button:hover {
   background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
 }
 .prev-button {
   left: 0;
-  border-top-right-radius: 15%;
-  border-bottom-right-radius: 15%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .next-button {
   right: 0;
-  border-top-left-radius: 15%;
-  border-bottom-left-radius: 15%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 .image-circles-container {
   display: flex;
