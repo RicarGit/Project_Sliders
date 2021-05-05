@@ -10,9 +10,16 @@
 img {
   display: none;
   width: 100%;
+  flex: 1 0 auto;
+  transition: 1s;
 }
 .show-img {
   display: block;
+}
+img.slide4 {
+  display: block;
+  scroll-snap-align: start;
+  pointer-events: none;
 }
 .slider-carousel {
   height: 100vh;
@@ -25,12 +32,13 @@ img {
   border-top: 1px dotted greenyellow;
 }
 .carousel-container {
-  max-width: 80vw;
-  max-height: 70vh;
+  width: 80%;
+  height: 70%;
   border: 20px double greenyellow;
 }
 .image-counter {
   position: absolute;
+  display: flex;
   padding: 10px;
   font-size: 1.5em;
   font-weight: bold;
@@ -50,6 +58,10 @@ img {
   display: flex;
   height: 100%;
   justify-content: space-between;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 .prev-button,
 .next-button {
@@ -125,7 +137,7 @@ img {
 /* MOBILE */
 @media (max-width: 800px) {
   .carousel-container {
-    max-width: 100vw;
+    width: 100vw;
     height: 40vh;
     border-right: none;
     border-left: none;
