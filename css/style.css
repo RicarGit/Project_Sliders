@@ -37,7 +37,6 @@ img.slide4 {
   border: 20px double greenyellow;
 }
 .image-counter,
-.image-counter2,
 .image-counter4 {
   position: absolute;
   padding: 10px;
@@ -120,7 +119,8 @@ img.slide4 {
     width: 13px;
     margin: 0 7px;
   }
-  .image-counter {
+  .image-counter,
+  .image-counter4 {
     font-size: 1.125em;
     padding: 5px;
   }

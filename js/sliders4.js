@@ -15,8 +15,8 @@ createCircleForEachImage(images4)
 
 const imageCircles4 = document.querySelectorAll('.image-circle4')
 
-const addsActiveClassInFirstCircleElement = circle =>
-  circle[0].classList.add('carousel-active')
+const addsActiveClassInFirstCircleElement = circles =>
+  circles[0].classList.add('carousel-active')
 
 addsActiveClassInFirstCircleElement(imageCircles4)
 

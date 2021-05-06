@@ -1,27 +1,46 @@
 const images = document.querySelectorAll(".slide1")
 const circleContainer = document.querySelector(".image-circles-container")
 
-images.forEach(() => {
-  const div = document.createElement('div')
-  circleContainer.appendChild(div).classList.add('image-circle')
-})
-
-const imageCircles = document.querySelectorAll('.image-circle')
-imageCircles[0].classList.add('carousel-active')
-
-imageCircles.forEach((circle, index) => circle.setAttribute('id', `${index}`))
-
 let slideIndex = 0
 
-imageCircles.forEach(circle => {
+const createCircleForEachImage1 = (images) =>
+  images.forEach(() => {
+    const div = document.createElement('div')
+    circleContainer.appendChild(div).classList.add('image-circle')
+  })
 
+createCircleForEachImage1(images)
+
+const imageCircles = document.querySelectorAll('.image-circle')
+
+const addsActiveClassInFirstCircleElement1 = circles =>
+  circles[0].classList.add('carousel-active')
+
+addsActiveClassInFirstCircleElement1(imageCircles)
+
+const insertAttributeIDToCircles = circles =>
+  circles.forEach((circle, index) => circle.setAttribute('id', `${index}`))
+
+insertAttributeIDToCircles(imageCircles)
+
+const showImage = () => images[slideIndex].classList.add('show-img')
+const hideImages = () => images.forEach(image => image.classList.remove('show-img'))
+const addClassToCurrentCircle1 = circle => circle[slideIndex].classList.add('carousel-active')
+const removeClassFromCircles1 = circles =>
+  circles.forEach(circle => circle.classList.remove('carousel-active'))
+
+const slider1 = circles => circles.forEach(circle => {
   circle.addEventListener('click', (event) => {
+    const getElementId = event.target.getAttribute('id')
 
-    images.forEach(image => image.classList.remove('show-img'))
-    imageCircles.forEach(circle => circle.classList.remove('carousel-active'))
+    hideImages()
+    removeClassFromCircles1(imageCircles)
 
-    slideIndex = event.target.getAttribute('id')
-    images[slideIndex].classList.add('show-img')
-    circle.classList.add('carousel-active')
+    slideIndex = getElementId
+
+    showImage()
+    addClassToCurrentCircle1(imageCircles)
   })
 })
+
+slider1(imageCircles)
