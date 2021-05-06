@@ -55,6 +55,7 @@ img.slide4 {
   scrollbar-width: thin;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 .prev-button,
 .next-button {
