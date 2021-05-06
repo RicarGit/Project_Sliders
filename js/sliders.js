@@ -3,7 +3,7 @@ const circleContainer = document.querySelector(".image-circles-container")
 
 let slideIndex = 0
 
-const createCircleForEachImage1 = (images) =>
+const createCircleForEachImage1 = images =>
   images.forEach(() => {
     const div = document.createElement('div')
     circleContainer.appendChild(div).classList.add('image-circle')
@@ -30,7 +30,7 @@ const removeClassFromCircles1 = circles =>
   circles.forEach(circle => circle.classList.remove('carousel-active'))
 
 const slider1 = circles => circles.forEach(circle => {
-  circle.addEventListener('click', (event) => {
+  circle.addEventListener('click', event => {
     const getElementId = event.target.getAttribute('id')
 
     hideImages()
