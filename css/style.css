@@ -36,23 +36,8 @@ img.slide4 {
   height: 70%;
   border: 20px double greenyellow;
 }
-.image-counter {
-  position: absolute;
-  display: flex;
-  padding: 10px;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: green;
-  z-index: 99;
-}
-.image-counter2 {
-  position: absolute;
-  padding: 10px;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: green;
-  z-index: 99;
-}
+.image-counter,
+.image-counter2,
 .image-counter4 {
   position: absolute;
   padding: 10px;
@@ -96,33 +81,17 @@ img.slide4 {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
-.image-circles-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-.image-circles-container2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
+.image-circles-container,
+.image-circles-container2,
 .image-circles-container4 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
-.image-circle {
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  margin: 0 10px;
-  background-color: greenyellow;
-  cursor: pointer;
-}
-.image-circle2 {
+.image-circle,
+.image-circle2,
+.image-circle4 {
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -131,12 +100,7 @@ img.slide4 {
   cursor: pointer;
 }
 .image-circle4 {
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  margin: 0 10px;
-  background-color: greenyellow;
-  cursor: pointer;
+  cursor: default;
 }
 .carousel-active {
   background-color: green;
